@@ -2,3 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .custome-container{
+      @apply max-w-[1140px] mx-auto px-5 md:px-7 lg:px-0 py-5 lg:py-10
+    }
+
+    .h1-semibold{
+      @apply text-[26px] leading-[30px] md:text-[40px] md:leading-[60px] lg:text-[56px] lg:leading-[72px] font-semibold
+    }
+}
