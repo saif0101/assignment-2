@@ -57,7 +57,7 @@
 <template>
   <div class="vaccineSlide relative overflow-visible">
     <div class="custome-container font-openSans ">
-    <div class="grid grid-cols-1 lg:grid-cols-3 items-center gap-3">
+    <div class="grid grid-cols-1 xl:grid-cols-3 items-center gap-3">
       <div class="">
         <h2 class="h1-semibold text-[50px] text-[#001844]">Our vaccines and medicines</h2>
         <p class="text-[#001844] mt-4">
