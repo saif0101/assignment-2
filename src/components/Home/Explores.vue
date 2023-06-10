@@ -1,6 +1,6 @@
 <template>
   <div class="custome-container py-20">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-8">
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-x-20 gap-y-8">
       <div>
         <div class="relative">
           <div

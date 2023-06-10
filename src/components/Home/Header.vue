@@ -17,7 +17,7 @@
                 </div>
 
                 <div class=" ">
-                    <figure class="hidden lg:block lg:absolute  top-0 right-0 bottom-0">
+                    <figure class="hidden xl:block lg:absolute  top-0 right-0 bottom-0">
                         <img class="h-full" src="../../assets/home/pexels-anna-shvets-3683102.png" alt="">
                     </figure>
                 </div>

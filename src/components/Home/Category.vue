@@ -26,21 +26,21 @@
   <div class="custome-container font-openSans py-20">
     <div class="">
       <!-- Tabs -->
-      <ul id="tabs" class="flex flex-wrap pt-2 px-1 w-full">
+      <ul id="tabs" class="flex  pt-2 px-1 w-full overflow-x-auto">
         <li
           class="border-b-2 border-[#6D6E70]/20 text-lg text-[#001844] px-5 py-3"
         >
-          <a id="default-tab" href="#first">A-Z:All</a>
+          <a class="whitespace-nowrap" id="default-tab" href="#first">A-Z:All</a>
         </li>
         <li
           class="border-b-2 border-[#6D6E70]/20 text-lg text-[#001844] px-5 py-3"
         >
-          <a href="#second">Therapeutic Area: All</a>
+          <a class="whitespace-nowrap" href="#second">Therapeutic Area: All</a>
         </li>
         <li
           class="border-b-2 border-[#6D6E70]/20 text-lg text-[#001844] px-5 py-3"
         >
-          <a href="#third">Commonly Prescribed</a>
+          <a class="whitespace-nowrap" href="#third">Commonly Prescribed</a>
         </li>
       </ul>
 
@@ -51,7 +51,7 @@
             <!-- faq one -->
             <div class="">
               <div class="question bg-ash cursor-pointer px-6 py-4">
-                <div class="flex flex-col sm:flex-row lg:items-center gap-5">
+                <div class="flex  lg:items-center gap-5">
                   <h4
                     class="text-[26px] leading-[30px] md:text-[40px] md:leading-[60px] lg:text-[56px] lg:leading-[72px] text-light text-[#001844]"
                   >
@@ -123,7 +123,7 @@
             <!-- faq two -->
             <div class="">
               <div class="question bg-ash cursor-pointer px-6 py-4">
-                <div class="flex flex-col sm:flex-row lg:items-center gap-5">
+                <div class="flex lg:items-center gap-5">
                   <h4
                     class="text-[26px] leading-[30px] md:text-[40px] md:leading-[60px] lg:text-[56px] lg:leading-[72px] text-light text-[#001844]"
                   >
@@ -199,7 +199,7 @@
             <!-- faq one -->
             <div class="">
               <div class="question bg-ash cursor-pointer px-6 py-4">
-                <div class="flex flex-col sm:flex-row lg:items-center gap-5">
+                <div class="flex lg:items-center gap-5">
                   <h4
                     class="text-[26px] leading-[30px] md:text-[40px] md:leading-[60px] lg:text-[56px] lg:leading-[72px] text-light text-[#001844]"
                   >
@@ -275,7 +275,7 @@
             <!-- faq two -->
             <div class="">
               <div class="question bg-ash cursor-pointer px-6 py-4">
-                <div class="flex flex-col sm:flex-row lg:items-center gap-5">
+                <div class="flex lg:items-center gap-5">
                   <h4
                     class="text-[26px] leading-[30px] md:text-[40px] md:leading-[60px] lg:text-[56px] lg:leading-[72px] text-light text-[#001844]"
                   >

@@ -3,7 +3,7 @@
     <h2 class="h1-semibold text-[#0F1A43] text-center">You might also like</h2>
 
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] mt-8"
+      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[30px] mt-8"
     >
       <div>
        <div class="overflow-hidden">
