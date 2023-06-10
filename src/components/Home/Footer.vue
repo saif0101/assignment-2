@@ -4,7 +4,7 @@
 
     
     <div class="custome-container relative">
-      <button @click="scrollToTop" class="absolute -top-7 right-0">
+      <button @click="scrollToTop" class="absolute -top-7 right-2 lg:right-0">
        
 <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>BFEB67DB-0A7D-4C44-9C00-6705637A55AE</title>
