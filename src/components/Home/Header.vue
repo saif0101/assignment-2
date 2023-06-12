@@ -18,7 +18,7 @@
 
                 <div class=" ">
                     <figure class="hidden xl:block lg:absolute  top-0 right-0 bottom-0">
-                        <img class="h-full" src="../../assets/home/pexels-anna-shvets-3683102.png" alt="">
+                        <img class="h-full" src="../../assets/pexels-anna-shvets-3683102.png" alt="">
                     </figure>
                 </div>
 
@@ -30,6 +30,6 @@
 </template>
 <style>
    .hero-background{
-      background-image: url('../../assets/home/dt-bg.jpg');
+      background-image: url('../../assets/dt-bg.jpg');
    }
 </style>

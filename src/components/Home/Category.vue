@@ -61,13 +61,13 @@
                   <div>
                     <img
                       class="faq-minus-icon inline-block"
-                      src="../../assets/home/Plus@1x.png"
+                      src="../../assets/Plus@1x.png"
                       alt="icon"
                     />
 
                     <img
                       class="faq-plus-icon inline-block"
-                      src="../../assets/home/mius@1x.png"
+                      src="../../assets/mius@1x.png"
                       alt="icon"
                     />
                   </div>
@@ -133,13 +133,13 @@
                   <div>
                     <img
                       class="faq-minus-icon inline-block"
-                      src="../../assets/home/Plus@1x.png"
+                      src="../../assets/Plus@1x.png"
                       alt="icon"
                     />
 
                     <img
                       class="faq-plus-icon inline-block"
-                      src="../../assets/home/mius@1x.png"
+                      src="../../assets/mius@1x.png"
                       alt="icon"
                     />
                   </div>
@@ -209,13 +209,13 @@
                   <div>
                     <img
                       class="faq-minus-icon inline-block"
-                      src="../../assets/home/Plus@1x.png"
+                      src="../../assets/Plus@1x.png"
                       alt="icon"
                     />
 
                     <img
                       class="faq-plus-icon inline-block"
-                      src="../../assets/home/mius@1x.png"
+                      src="../../assets/mius@1x.png"
                       alt="icon"
                     />
                   </div>
@@ -285,13 +285,13 @@
                   <div>
                     <img
                       class="faq-minus-icon inline-block"
-                      src="../../assets/home/Plus@1x.png"
+                      src="../../assets/Plus@1x.png"
                       alt="icon"
                     />
 
                     <img
                       class="faq-plus-icon inline-block"
-                      src="../../assets/home/mius@1x.png"
+                      src="../../assets/mius@1x.png"
                       alt="icon"
                     />
                   </div>

@@ -12,12 +12,12 @@
               class="absolute inset-0 m-auto left-1/3"
             >
               <img
-                src="../../assets/Group 53 Copy@1x.png"
+                src="../../assets/home/Group 53 Copy@1x.png"
                 alt="play-button"
               />
             </button>
             <figure>
-              <img src="../../assets/video-thum.jpg" alt="thumbnail" />
+              <img src="../../assets/home/video-thum.jpg" alt="thumbnail" />
             </figure>
           </div>
         </div>
