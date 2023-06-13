@@ -53,7 +53,7 @@
               <div id="app" class="lg:hidden flex justify-center mt-3 w-full relative z-10">
                 <div id="mobile-menu" class="mobile-menu absolute top-23 w-screen">
                   <!-- add hidden here later -->
-                  <ul class="bg-[#181818] shadow-lg leading-9 h-screen space-y-3 py-4 pl-4">
+                  <ul class="bg-[#0F1A43] shadow-lg leading-9 h-screen space-y-3 py-4 pl-4">
                     <li class="flex items-center relative">
                       <a class="text-[#8C8D8F] font-medium text-[15px] leading-4" href="#">
                         <div>

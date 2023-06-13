@@ -388,106 +388,108 @@ onMounted(() => {
   //   for faq
 
   (function () {
-    /**
-     * hide FAQ's all answers without clicked question's answer
-     * @param questions
-     * @param avoidableIndex
-     * @param faqAnswerControlBy
-     */
-    function hideOthersAnswer(questions, avoidableIndex, faqAnswerControlBy) {
-      questions.forEach((question, i) => {
-        if (i !== avoidableIndex) {
-          let answerArea = selectAnswerForToggle(question);
+  /**
+   * hide FAQ's all answers without clicked question's answer
+   * @param questions
+   * @param avoidableIndex
+   * @param faqAnswerControlBy
+   */
+  function hideOthersAnswer(questions, avoidableIndex, faqAnswerControlBy) {
+    questions.forEach((question, i) => {
+      if (i !== avoidableIndex) {
+        let answerArea = selectAnswerForToggle(question);
 
-          if (faqAnswerControlBy === "style") {
-            answerArea.style.height = "0px";
-          }
-
-          answerArea?.classList.remove("active");
-          question?.classList.remove("active");
+        if (faqAnswerControlBy === "style") {
+          answerArea.style.height = "0px";
         }
-      });
+
+        answerArea?.classList.remove("active");
+        question?.classList.remove("active");
+        //  question?.classList.remove("text-white");
+      }
+    });
+  }
+
+  /**
+   * select answer element of clicked question. Answer may place inside question element or after question element.
+   * @param question
+   * @returns {null|Element|*}
+   */
+  function selectAnswerForToggle(question) {
+    let answerFromInside = question.querySelector(".answer");
+    if (answerFromInside) {
+      return answerFromInside;
     }
 
-    /**
-     * select answer element of clicked question. Answer may place inside question element or after question element.
-     * @param question
-     * @returns {null|Element|*}
-     */
-    function selectAnswerForToggle(question) {
-      let answerFromInside = question.querySelector(".answer");
-      if (answerFromInside) {
-        return answerFromInside;
-      }
-
-      let answerFromNextElement = question.nextElementSibling;
-      if (answerFromNextElement && answerFromNextElement.matches(".answer")) {
-        return answerFromNextElement;
-      }
-
-      return null;
+    let answerFromNextElement = question.nextElementSibling;
+    if (answerFromNextElement && answerFromNextElement.matches(".answer")) {
+      return answerFromNextElement;
     }
 
-    /** select all faq container **/
-    let faqContainers = document.querySelectorAll(".faq-container");
+    return null;
+  }
 
-    if (faqContainers.length) {
-      let defaultFaqOptions = {
-        slide_speed: 300, // expected value  numeric miliseconds
-        close_others: true, // expected value 'true', 'false'
-        answer_control_by: "style", // expected value 'class', 'style'
-      };
+  /** select all faq container **/
+  let faqContainers = document.querySelectorAll(".faq-container");
 
-      faqContainers.forEach((faqContainer) => {
-        let faqAnswerSlideSpeed = faqContainer.hasAttribute("slide_speed")
-          ? parseInt(faqContainer.getAttribute("slide_speed"))
-          : defaultFaqOptions.slide_speed;
+  if (faqContainers.length) {
+    let defaultFaqOptions = {
+      slide_speed: 300, // expected value  numeric miliseconds
+      close_others: true, // expected value 'true', 'false'
+      answer_control_by: "style", // expected value 'class', 'style'
+    };
 
-        let faqCloseOtherAnswer = faqContainer.hasAttribute("close_others")
-          ? faqContainer.getAttribute("close_others") == "true"
-          : defaultFaqOptions.close_others;
+    faqContainers.forEach((faqContainer) => {
+      let faqAnswerSlideSpeed = faqContainer.hasAttribute("slide_speed")
+        ? parseInt(faqContainer.getAttribute("slide_speed"))
+        : defaultFaqOptions.slide_speed;
 
-        let faqAnswerControlBy = faqContainer.hasAttribute("answer_control_by")
-          ? faqContainer.getAttribute("answer_control_by")
-          : defaultFaqOptions.answer_control_by;
+      let faqCloseOtherAnswer = faqContainer.hasAttribute("close_others")
+        ? faqContainer.getAttribute("close_others") == "true"
+        : defaultFaqOptions.close_others;
 
-        let questions = faqContainer.querySelectorAll(".question");
+      let faqAnswerControlBy = faqContainer.hasAttribute("answer_control_by")
+        ? faqContainer.getAttribute("answer_control_by")
+        : defaultFaqOptions.answer_control_by;
 
-        questions.forEach((question, i) => {
-          let answerArea = selectAnswerForToggle(question);
+      let questions = faqContainer.querySelectorAll(".question");
 
-          let answerAreaHeight = answerArea.getBoundingClientRect().height;
+      questions.forEach((question, i) => {
+        let answerArea = selectAnswerForToggle(question);
 
-          /**
-           * add some style for slide-up & down transition when answerControlBy value is 'style' (default).
-           */
-          if (faqAnswerControlBy === "style") {
-            answerArea.style.cssText = `
+        let answerAreaHeight = answerArea.getBoundingClientRect().height;
+
+        /**
+         * add some style for slide-up & down transition when answerControlBy value is 'style' (default).
+         */
+        if (faqAnswerControlBy === "style") {
+          answerArea.style.cssText = `
                     overflow: hidden;
                     transition: height ${faqAnswerSlideSpeed}ms ease-in;
-                  `;
-            answerArea.style.height = "0px";
+                `;
+          answerArea.style.height = "0px";
+        }
+
+        question.addEventListener("click", function () {
+          answerArea.classList.toggle("active");
+          question.classList.toggle("active");
+
+          if (faqAnswerControlBy === "style") {
+            if (answerArea.style.height === "0px") {
+              answerArea.style.height = answerAreaHeight + "px";
+            } else {
+              answerArea.style.height = "0px";
+            }
           }
 
-          question.addEventListener("click", function () {
-            answerArea.classList.toggle("active");
-            question.classList.toggle("active");
-
-            if (faqAnswerControlBy === "style") {
-              if (answerArea.style.height === "0px") {
-                answerArea.style.height = answerAreaHeight + "px";
-              } else {
-                answerArea.style.height = "0px";
-              }
-            }
-
-            if (faqCloseOtherAnswer) {
-              hideOthersAnswer(questions, i, faqAnswerControlBy);
-            }
-          });
+          if (faqCloseOtherAnswer) {
+            hideOthersAnswer(questions, i, faqAnswerControlBy);
+          }
         });
       });
-    }
-  })();
+    });
+  }
+}
+)();
 });
 </script>
