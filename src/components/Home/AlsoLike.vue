@@ -8,7 +8,7 @@
       <div>
        <div class="overflow-hidden">
         <figure class="hover:scale-110 transition-all ease-linear delay-100 duration-300 cursor-pointer">
-          <img src="../../assets/dt-teaser-01.jpg" alt="also-like-01" />
+          <img :src="AlosLikeOne" alt="also-like-01" />
         </figure>
        </div>
 
@@ -42,7 +42,7 @@
       <div>
        <div class="overflow-hidden">
         <figure class="hover:scale-110 transition-all ease-linear delay-100 duration-300 cursor-pointer">
-          <img src="../../assets/dt-teaser-02.jpg" alt="also-like-02" />
+          <img :src="AlosLikeTwo" alt="also-like-02" />
         </figure>
        </div>
 
@@ -76,7 +76,7 @@
       <div>
        <div class="overflow-hidden">
         <figure class="hover:scale-110 transition-all ease-linear delay-100 duration-300 cursor-pointer">
-          <img src="../../assets/dt-teaser-03.jpg" alt="also-like-03" />
+          <img :src="AlosLikeThree" alt="also-like-03" />
         </figure>
        </div>
 
@@ -111,3 +111,9 @@
     </div>
   </div>
 </template>
+<script setup>
+ import AlosLikeOne from "../../assets/dt-teaser-01.jpg";
+ import AlosLikeTwo from "../../assets/dt-teaser-02.jpg";
+ import AlosLikeThree from "../../assets/dt-teaser-03.jpg";
+
+</script>

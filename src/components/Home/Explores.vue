@@ -12,12 +12,12 @@
               class="absolute inset-0 m-auto left-1/3"
             >
               <img
-                src="../../assets/Group 53 Copy@1x.png"
+                :src="PlayButton"
                 alt="play-button"
               />
             </button>
             <figure>
-              <img src="../../assets/video-thum.jpg" alt="thumbnail" />
+              <img :src="ThumbImage" alt="thumbnail" />
             </figure>
           </div>
         </div>
@@ -40,6 +40,9 @@
 </template>
 
 <script setup>
+
+import ThumbImage from "../../assets/video-thum.jpg"
+import PlayButton from "../../assets/Group 53 Copy@1x.png"
 function customVideo() {
   document.getElementById("customVideo").innerHTML =
     '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/sZmtypVN0uc?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; allow="autoplay; &muted=1 ; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';

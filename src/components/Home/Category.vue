@@ -61,13 +61,13 @@
                   <div>
                     <img
                       class="faq-minus-icon inline-block"
-                      src="../../assets/Plus@1x.png"
+                      :src="PlusButton"
                       alt="icon"
                     />
 
                     <img
                       class="faq-plus-icon inline-block"
-                      src="../../assets/mius@1x.png"
+                      :src="MinusButton"
                       alt="icon"
                     />
                   </div>
@@ -133,13 +133,13 @@
                   <div>
                     <img
                       class="faq-minus-icon inline-block"
-                      src="../../assets/Plus@1x.png"
+                      :src="PlusButton"
                       alt="icon"
                     />
 
                     <img
                       class="faq-plus-icon inline-block"
-                      src="../../assets/mius@1x.png"
+                      :src="MinusButton"
                       alt="icon"
                     />
                   </div>
@@ -209,13 +209,13 @@
                   <div>
                     <img
                       class="faq-minus-icon inline-block"
-                      src="../../assets/Plus@1x.png"
+                      :src="PlusButton"
                       alt="icon"
                     />
 
                     <img
                       class="faq-plus-icon inline-block"
-                      src="../../assets/mius@1x.png"
+                      :src="MinusButton"
                       alt="icon"
                     />
                   </div>
@@ -285,13 +285,13 @@
                   <div>
                     <img
                       class="faq-minus-icon inline-block"
-                      src="../../assets/Plus@1x.png"
+                      :src="PlusButton"
                       alt="icon"
                     />
 
                     <img
                       class="faq-plus-icon inline-block"
-                      src="../../assets/mius@1x.png"
+                      :src="MinusButton"
                       alt="icon"
                     />
                   </div>
@@ -352,6 +352,8 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import PlusButton from "../../assets/Plus@1x.png"
+import MinusButton from "../../assets/mius@1x.png"
 
 const tabTogglers = ref([]);
 const tabContents = ref([]);
